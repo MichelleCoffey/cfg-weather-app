@@ -1,5 +1,8 @@
-import React from "react";
+import React from 'react';
+import { LocationBox } from './components/LocationBox';
+
 import './App.css';
+
 const api = {
   key: "36ffa85294264ac7d94239e6938bd968",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -16,10 +19,9 @@ function App() {
             placeholder="Search"
           />
         </div>
-        <div className="location-box">
-          <div className="location">Cork</div>
-          <div className="date">6th of December</div>
-        </div>
+
+  <LocationBox />
+
         <div className="weather-box">
           <div className="temp">22°C</div>
           <div className="weather">Sunny</div>
