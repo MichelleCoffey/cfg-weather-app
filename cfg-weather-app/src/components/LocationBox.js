@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -16,8 +17,8 @@ const dateBuilder = (d) => {
 export const LocationBox = () => {
   return (
     <div className="location-box">
-            <div className="location"></div>
-            <div className="date">{dateBuilder(new Date())}</div>
+            
+            <h2 className="date">{dateBuilder(new Date())}</h2>
      </div>
   )
 }

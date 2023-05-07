@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { LocationBox } from './components/LocationBox';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 const api = {
@@ -26,11 +28,14 @@ function App() {
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
+        <header className="logo">
+          <h1>My Weather App </h1>
+        </header>
         <div className="search-box">
           <input 
             type="text"
             className="search-bar"
-            placeholder="Search..."
+            placeholder="Enter city name"
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
@@ -41,9 +46,11 @@ function App() {
           <LocationBox />
           <div className="weather-box">
             <div className="temp">
+            <FontAwesomeIcon icon={faCloudSun} />
+            <div className="location">{weather.name}, {weather.sys.country}</div>
               {Math.round(weather.main.temp)}°c
+              <div className="weather">{weather.weather[0].main}</div>
             </div>
-            <div className="weather">{weather.weather[0].main}</div>
           </div>
         </div>
         ) : ('')}
