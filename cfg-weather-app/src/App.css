@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Solid&display=swap');
 
 * {
   margin: 0;
@@ -95,14 +95,16 @@ main {
 }
 
 .weather-box .temp {
+  font-family: 'Londrina Solid', cursive;
   position: relative;
   display: inline-block;
-  margin: 30px auto;
+  margin: 10px auto;
   border-color: none;
 
   padding: 15px 25px;
 
   color: #fff;
+  text-shadow: #A4DDED;
   font-size: 102px;
   font-weight: 900;
 
@@ -111,29 +113,25 @@ main {
 }
 
 .weather-box .weather {
-  color: #6699CC;
+  color: #A4DDED;
+  font-family: 'Londrina Solid', cursive;
   font-size: 51px;
-  font-weight: 700;
+  font-weight: 900;
   
 } 
 
 
 .app .bottom {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Londrina Solid', cursive;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin: 1rem auto;
   padding: 1rem;
-  color: #6699CC;
-  background-color: #fff;
-}
-
-.bold {
-  font-weight: 700;
+  color: #A4DDED;
 }
 
 .center {

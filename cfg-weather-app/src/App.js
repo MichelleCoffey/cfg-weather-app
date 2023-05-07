@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { DateBox } from './components/DateBox';
 import { Header } from './components/Header';
 
+
+/* This was externally downloaded using fontawesome. I found a great video explaining how to on you tube. https://www.youtube.com/watch?v=7fdpzXeXbcE*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudSun, faCloudSunRain, faWind  } from '@fortawesome/free-solid-svg-icons'
+import { faCloudSun, faCloudSunRain, faWind, faFaceGrinBeamSweat  } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+
 
 const api = {
   key: "36ffa85294264ac7d94239e6938bd968",
@@ -63,7 +66,7 @@ function App() {
             </div>
             <div className="humidity">
             <p>{weather.main.humidity}%</p>
-            <FontAwesomeIcon icon={faCloudSunRain} />
+            <FontAwesomeIcon icon={faFaceGrinBeamSweat} />
               <p>Humidity</p>
               
             </div>
