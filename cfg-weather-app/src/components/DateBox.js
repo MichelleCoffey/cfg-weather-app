@@ -14,9 +14,9 @@ const dateBuilder = (d) => {
 }
 
 
-export const LocationBox = () => {
+export const DateBox = () => {
   return (
-    <div className="location-box">
+    <div>
             
             <h2 className="date">{dateBuilder(new Date())}</h2>
      </div>

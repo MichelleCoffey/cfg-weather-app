@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { LocationBox } from './components/LocationBox';
+import { DateBox } from './components/DateBox';
+import { Header } from './components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
+import { faCloudSun, faCloudSunRain, faWind  } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 const api = {
@@ -28,9 +29,7 @@ function App() {
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
-        <header className="logo">
-          <h1>My Weather App </h1>
-        </header>
+        <Header />
         <div className="search-box">
           <input 
             type="text"
@@ -43,13 +42,13 @@ function App() {
         </div>
         {(typeof weather.main != "undefined") ? (
         <div>
-          <LocationBox />
+          <DateBox />
           <div className="weather-box">
             <div className="temp">
             <FontAwesomeIcon icon={faCloudSun} />
             <div className="location">{weather.name}, {weather.sys.country}</div>
               {Math.round(weather.main.temp)}°c
-              <div className="weather">{weather.weather[0].main}</div>
+              <div className="weather"><bold>{weather.weather[0].main}</bold></div>
             </div>
           </div>
         </div>
@@ -57,17 +56,20 @@ function App() {
         {(typeof weather.main != "undefined") ? (
         <div className="bottom">
             <div className="feels">
-            {weather.main ? <p className='bold'>{weather.main.feels_like.toFixed()}°C</p> : null}
+            <p>{Math.round(weather.main.feels_like)}°C</p>
+            <FontAwesomeIcon icon={faCloudSunRain} />
               <p>Feels Like</p>
               
             </div>
             <div className="humidity">
-            {weather.main ? <p className='bold'>{weather.main.humidity}%</p> : null}
+            <p>{weather.main.humidity}%</p>
+            <FontAwesomeIcon icon={faCloudSunRain} />
               <p>Humidity</p>
               
             </div>
             <div className="wind">
-            {weather.wind? <p className='bold'>{weather.wind.speed.toFixed()}KM/H</p> : null}
+            <p>{Math.round(weather.wind.speed)}KM/H</p>
+            <FontAwesomeIcon icon={faWind} />
               <p>Wind Speed</p>
               
             </div>
@@ -75,6 +77,7 @@ function App() {
         ) : ('')}
       </main>
     </div>
+    
   );
 }
 
