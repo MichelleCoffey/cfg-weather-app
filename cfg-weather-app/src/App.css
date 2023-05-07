@@ -18,6 +18,10 @@ body {
 
 }
 
+.app.warm {
+  background-image: url('./assets/hotsun.jpg');
+}
+
 header {
   margin: 0;
   padding: .5rem 1.5rem;
@@ -73,23 +77,6 @@ main {
   color: black;
 }
 
-.location-box .location {
-  color: #0f0e0e;
-  font-size: 32px;
-  font-weight: 500px;
-  text-align: center;
-  text-shadow: 3px 3px rgba(50, 50 70, 0.5);
-}
-
-.location-box {
-  color: #0f0e0e;
-  font-size: 15px;
-  font-weight: 300px;
-  font-style: italic;
-  text-align: center;
-  text-shadow: 2px 2px (50, 50, 70, 0.5);
-}
-
 .weather-box {
   text-align: center;
 }
@@ -103,13 +90,10 @@ main {
 
   padding: 15px 25px;
 
-  color: #fff;
+  color: #A4DDED;
   text-shadow: #A4DDED;
   font-size: 102px;
   font-weight: 900;
-
-  
-
 }
 
 .weather-box .weather {
@@ -119,7 +103,6 @@ main {
   font-weight: 900;
   
 } 
-
 
 .app .bottom {
   font-family: 'Londrina Solid', cursive;

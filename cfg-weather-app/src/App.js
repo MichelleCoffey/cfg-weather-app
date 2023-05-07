@@ -3,17 +3,18 @@ import { DateBox } from './components/DateBox';
 import { Header } from './components/Header';
 
 
-/* This was externally downloaded using fontawesome. I found a great video explaining how to on you tube. https://www.youtube.com/watch?v=7fdpzXeXbcE*/
+/* This was externally downloaded using fontawesome. I found a great video explaining how to on youtube.com   . https://www.youtube.com/watch?v=7fdpzXeXbcE*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudSun, faCloudSunRain, faWind, faFaceGrinBeamSweat  } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
-
+/* This is the API for getting up to date weather info. Openweather is a great easy to use API. Lots of tutorials seemed to use it.*/
 const api = {
   key: "36ffa85294264ac7d94239e6938bd968",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
+/* This creates the search bar.*/
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -29,8 +30,10 @@ function App() {
         });
     }
   }
+
+  
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 25) ? 'app warm' : 'app') : 'app'}>
       <main>
         <Header />
         <div className="search-box">
@@ -48,10 +51,10 @@ function App() {
           <DateBox />
           <div className="weather-box">
             <div className="temp">
-            <FontAwesomeIcon icon={faCloudSun} />
+            <FontAwesomeIcon id="faCloudSun" icon={faCloudSun} />
             <div className="location">{weather.name}, {weather.sys.country}</div>
               {Math.round(weather.main.temp)}°c
-              <div className="weather"><bold>{weather.weather[0].main}</bold></div>
+              <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
         </div>
