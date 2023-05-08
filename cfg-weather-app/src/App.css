@@ -12,7 +12,7 @@ body {
 
 .app {
   background-image: url('./assets/clouds.jpg');
-  background-color: #f8f8f8;
+  background-color: #f8f8f;
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease;
