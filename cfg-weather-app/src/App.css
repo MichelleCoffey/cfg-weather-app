@@ -12,7 +12,7 @@ body {
 
 .app {
   background-image: url('./assets/clouds.jpg');
-  background-color: #f8f8f;
+  background-color: #f8f8f8;
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease;
@@ -47,8 +47,15 @@ h1, h2 {
   justify-content: center;
 }
 
-h1 {
+.logo {
   font-size: 3rem;
+  color: #A4DDED;
+  font-family: 'Londrina Solid', cursive;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 main {
@@ -78,17 +85,17 @@ main {
 
 .weather-box .temp {
   font-family: 'Londrina Solid', cursive;
+  font-size: 96px;
+  font-weight: 900;
+
   position: relative;
   display: inline-block;
+
   margin: 30px auto;
   border-color: none;
 
-
-
   color: #A4DDED;
   text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
-  font-size: 96px;
-  font-weight: 900;
 }
 
 .weather-box .weather {
