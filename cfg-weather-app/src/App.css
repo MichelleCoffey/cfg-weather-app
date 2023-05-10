@@ -47,7 +47,7 @@ h1, h2 {
   justify-content: center;
 }
 
-.logo {
+h1 {
   font-size: 3rem;
   color: #A4DDED;
   font-family: 'Londrina Solid', cursive;
